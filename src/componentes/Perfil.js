@@ -1,5 +1,7 @@
 import React from 'react';
 import '../estilos/Perfil.css';
+import Contador from './Contador';
+
 
 function Perfil(props){
     return(
@@ -15,7 +17,22 @@ function Perfil(props){
             {props.cargo} en <strong>{props.empresa}</strong>
         </p>
         <p className='texto-perfil'>"{props.perfil}" </p>
+        <div className='button-content'>
+        <button onClick={()=>window.open(props.linkedin, '_blank')}>
+            Seguir en linkedin 
+            <Contador/>
+        </button>
+        <button onClick={()=>window.open(props.youtube, '_blank')}>
+            Seguir en Youtube
+            <Contador/>
+        </button>
+        <button onClick={()=>window.open(props.instagram, '_blank')}>
+            Seguir en Instagram
+            <Contador/>
+        </button>
         </div>
+        </div>
+        
     </div>
     );
 }
